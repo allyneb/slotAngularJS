@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Jogo de Slots</title>
+	<link type="text/css" rel="stylesheet" href="style.css" />
+   
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/ngDialog/js/ngDialog.min.js"></script>
+    <script type="text/javascript" src="bower_components/ngDialog/js/ngDialog.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+</head>
+
+<body>
+	<div id="corpo" ng-controller="Controller">
+		<div id="creditos_txt">
+			Créditos
+		</div>
+
+		<div id="creditos">
+			<form>
+				<input id="credito" type="text" size="5" value="R$ 0" readonly />
+			</form>
+		</div>
+
+		<div id="valor_txt">
+			Valor da Aposta
+		</div>
+
+		<div id="valor">
+			<form>
+				<input id="aposta" type="text" size="1" value="R$ 1" readonly />
+			</form>
+		</div>
+
+		<div id="tela">
+			<div id="slot1">
+				<img id="fruta1" src="img/uva.png" />
+			</div>
+			<div id="slot2">
+				<img id="fruta2" src="img/laranja.png" />
+			</div>
+			<div id="slot3">
+				<img id="fruta3" src="img/morango.png" />
+			</div>
+		</div>
+
+		<div id="botoes">
+			<img src="img/apostamenos.gif" onMouseDown="this.src='img/apostamenos_p.gif';"
+				onMouseUp="this.src='img/apostamenos.gif';" ng-click="apostaMenos();" />
+			<img src="img/apostamais.gif" onMouseDown="this.src='img/apostamais_p.gif';"
+				onMouseUp="this.src='img/apostamais.gif';" ng-click="apostaMais();" />
+			<img src="img/jogar.gif" onMouseDown="this.src='img/jogar_p.gif';" onMouseUp="this.src='img/jogar.gif';"
+				ng-click="jogar();" />
+		</div>
+
+		<div id="rodapé">
+			<p style="text-indent: 200px;">
+				<a href="tabela.html" target="_blank">Clique no link para acessar a tabela de prêmios!</a>
+			</p>
+		</div>
+	</div>
+</body>
+
+</html>
